@@ -1,129 +1,253 @@
-<!DOCTYPE html> 
- <html> 
+<!DOCTYPE html>
+<html lang="es">
 <head>
- <meta charset="UTF-8"> <title>Mi Biografía</title>
-<style> body{
-background: linear-gradient(135deg,#BDB76B,#4682B4); 
-    font-family: Arial, sans-serif;
-    max-width: 700px;
-    margin: 40px auto;
-    padding: 30px;
-    background-color: white;}
-{ background-color: #90EE90; font-family: Arial, sans-serif; max-width: 700px; margin: 40px auto; padding: 30px; background-color: white; border-radius: 20px; box-shadow: 0 0 30px rgba(0,0,0,0.1); } h1 { color: #2c3e50; text-align: center; font-size: 36px; } h2 { color: #90EE90; border-bottom: 5px solid #90EE90; padding-bottom: 8px; } img { display: block; margin: 20px auto; border-radius: 50%; border: 4px solid #3498db; width: 200px; height: 200px; object-fit: cover; } 
-ul { background-color: #ecf0f1; padding: 20px 30px; border-radius: 12px; list-style: none; } ul li { padding: 8px 0; border-bottom: 1px solid #bdc3c7; } ul li:last-child { border-bottom: none; }
-a { color: #e74c3c; text-decoration: none; font-weight: bold; } a:hover { text-decoration: underline; color: #4682B4; }
+    <meta charset="UTF-8">
+    <title>Mi Biografía</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #BDB76B, #4682B4);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .contenedor-principal {
+            background-color: white;
+            max-width: 700px;
+            width: 100%;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.15);
+            box-sizing: border-box;
+        }
 
-#texto-extra {
-  display: none;
-}
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            font-size: 36px;
+            margin-top: 0;
+        }
 
+        h2 {
+            color: #4682B4;
+            border-bottom: 5px solid #4682B4;
+            padding-bottom: 8px;
+            margin-top: 30px;
+        }
 
-#boton-continuar {
-  background-color: #3498db;
-  color: white;
-  border: none;
-  padding: 8px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px;
-}
+        p, h4 {
+            color: #34495e;
+            font-weight: normal;
+            line-height: 1.6;
+        }
 
-</style>
+        img {
+            display: block;
+            margin: 20px auto;
+            border-radius: 50%;
+            border: 4px solid #3498db;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
 
+        ul {
+            background-color: #ecf0f1;
+            padding: 20px 40px;
+            border-radius: 12px;
+            list-style: disc;
+        }
+
+        ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #bdc3c7;
+            color: #2c3e50;
+        }
+
+        ul li:last-child {
+            border-bottom: none;
+        }
+
+        a {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #4682B4;
+        }
+
+        #boton-continuar {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        #boton-continuar:hover {
+            background-color: #2980b9;
+        }
+
+        /* --- Estilos de la Sección de Música --- */
+        .seccion-musica {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .tarjeta-cancion {
+            background-color: #f8f9fa;
+            border-left: 5px solid #e74c3c;
+            padding: 15px 20px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .info-cancion {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .titulo-cancion {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 16px;
+        }
+
+        .artista-cancion {
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-top: 4px;
+        }
+
+        .boton-youtube {
+            background-color: #e74c3c;
+            color: white !important;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .boton-youtube:hover {
+            background-color: #c0392b;
+            text-decoration: none !important;
+            transform: scale(1.05);
+        }
+    </style>
 </head>
-    <h1>¡Hola! Soy Ezequias Elal</h1> 
-  <em><p>Esta es mi primera página web.Por lo tanto no es perfecta</p></em>
-    <h2>Sobre mi</h2> 
- <h4>
-  <p>
-    Yo naci en Cordoba, Cordoba, Argentina el 3 de noviembre de 2011.
+<body>
+
+<div class="contenedor-principal">
+    <h1>¡Hola! Soy Ezequias Elal</h1>
+    <p style="text-align: center; font-style: italic; color: #7f8c8d;">
+        Esta es mi primera página web. Por lo tanto no es perfecta.
+    </p>
     
-  
-    <span id="texto-efecto"></span>
-  </p>
-  
- 
-  <button id="boton-continuar">Continuar</button>
-</h4>
- <img src="foto.jpg" alt="Mi foto" width="200">
- <h2>Mis gustos</h2>
-<ul><li>Me gusta hacer origamis</li>
-    <li>Hice taekwondo</li>
-    <li>Y me gusta resolver cubos de rubik</li>
-</ul>
-  <h2>Mi música favorita</h2>
-<div class="seccion-musica">
-    <!-- Canción 1 -->
-    <div class="tarjeta-cancion">
-        <div class="info-cancion">
-            <span class="titulo-cancion">Título de la Canción 1</span>
-            <span class="artista-cancion">Artista / Banda</span>
+    <h2>Sobre mí</h2>
+    <p>
+        Yo nací en Córdoba, Córdoba, Argentina el 3 de noviembre de 2011.
+        <span id="texto-efecto"></span>
+    </p>
+    <button id="boton-continuar">Continuar</button>
+
+    <img src="foto.jpg" alt="Mi foto">
+
+    <h2>Mis gustos</h2>
+    <ul>
+        <li>Me gusta hacer origamis</li>
+        <li>Hice taekwondo</li>
+        <li>Y me gusta resolver cubos de Rubik</li>
+    </ul>
+
+    <!-- SECCIÓN DE MÚSICA FAVORITA -->
+    <h2>Mi música favorita</h2>
+    <div class="seccion-musica">
+        <!-- Canción 1 -->
+        <div class="tarjeta-cancion">
+            <div class="info-cancion">
+                <span class="titulo-cancion">Christmas Truce</span>
+                <span class="artista-cancion">Sabaton</span>
+            </div>
+            <a href="https://www.youtube.com/watch?v=RkR1Mn2X6_M" target="_blank" class="boton-youtube">
+                Escuchar en YouTube
+            </a>
         </div>
-        <a href="https://youtube.com" target="_blank" class="boton-youtube">
-            Escuchar en YouTube
-        </a>
+
+        <!-- Canción 2 -->
+        <div class="tarjeta-cancion">
+            <div class="info-cancion">
+                <span class="titulo-cancion">Bismarck</span>
+                <span class="artista-cancion">Sabaton</span>
+            </div>
+            <a href="https://youtube.com" target="_blank" class="boton-youtube">
+                Escuchar en YouTube
+            </a>
+        </div>
+
+        <!-- Canción 3 -->
+        <div class="tarjeta-cancion">
+            <div class="info-cancion">
+                <span class="titulo-cancion">Thunderstruck</span>
+                <span class="artista-cancion">AC/DC</span>
+            </div>
+            <a href="https://youtube.com" target="_blank" class="boton-youtube">
+                Escuchar en YouTube
+            </a>
+        </div>
     </div>
 
-    <!-- Canción 2 -->
-    <div class="tarjeta-cancion">
-        <div class="info-cancion">
-            <span class="titulo-cancion">Título de la Canción 2</span>
-            <span class="artista-cancion">Artista / Banda</span>
-        </div>
-        <a href="https://youtube.com" target="_blank" class="boton-youtube">
-            Escuchar en YouTube
-        </a>
-    </div>
-
-    <!-- Canción 3 -->
-    <div class="tarjeta-cancion">
-        <div class="info-cancion">
-            <span class="titulo-cancion">Título de la Canción 3</span>
-            <span class="artista-cancion">Artista / Banda</span>
-        </div>
-        <a href="https://youtube.com" target="_blank" class="boton-youtube">
-            Escuchar en YouTube
-        </a>
-    </div>
+    <h2>Mi futuro</h2>
+    <p>Yo en 5 años me veo estudiando para la facu y trabajando para tener mi propio sueldo.</p>
+    
+    <p>Mi Instagram: <a href="https://instagram.com" target="_blank">@hola_chau</a></p>
+    <!-- es el instagram de mi hermana porque yo no uso redes sociales -->
 </div>
-<h2>Mi futuro</h2>
-<p>yo en 5 años me veo estudiando para la facu y trabajando para tener mi propio sueldo.</p>
-<p>Mi Instagram: <a href="https://instagram.com/hola_chau">@hola_chau</a></p><!--es el instagram de mi hermana porque yo no uso redes sociales -->
+
 <script>
-  // 1. Guardamos el texto completo que queremos que se escriba solo
-  // Usamos \n para los saltos de línea (que luego convertiremos en <br>)
-  const textoCompleto = "\n Me crie con mi famila, esta está compuesta por mi papá, mi mamá y mis dos hermanas.\n Cuando tenia unos 13 años nacio mi hermanito menor llamado Ádan.";
+    const textoCompleto = "\n\nMe crié con mi familia, esta está compuesta por mi papá, mi mamá y mis dos hermanas.\nCuando tenía unos 13 años nació mi hermanito menor llamado Adán.";
+    const boton = document.getElementById('boton-continuar');
+    const contenedor = document.getElementById('texto-efecto');
+    let indice = 0;
 
-  // 2. Seleccionamos los elementos del HTML
-  const boton = document.getElementById('boton-continuar');
-  const contenedor = document.getElementById('texto-efecto');
-
-  let indice = 0; // Lleva la cuenta de qué letra toca escribir
-
-  // 3. Esta función se ejecuta repetidamente para escribir letra por letra
-  function escribirLetra() {
-    if (indice < textoCompleto.length) {
-      let letraActual = textoCompleto.charAt(indice);
-
-      // Si encuentra un salto de línea (\n), lo convierte en una etiqueta <br> para el HTML
-      if (letraActual === "\n") {
-        contenedor.innerHTML += "<br>";
-      } else {
-        contenedor.innerHTML += letraActual;
-      }
-
-      indice++;
-      // Velocidad: Ejecuta la función de nuevo en 40 milisegundos (puedes cambiar este número)
-      setTimeout(escribirLetra, 40); 
+    function escribirLetra() {
+        if (indice < textoCompleto.length) {
+            let letraActual = textoCompleto.charAt(indice);
+            if (letraActual === "\n") {
+                contenedor.innerHTML += "<br>";
+            } else {
+                contenedor.innerHTML += letraActual;
+            }
+            indice++;
+            setTimeout(escribirLetra, 40);
+        }
     }
-  }
 
-  // 4. Escuchamos el clic del botón para iniciar el efecto
-  boton.addEventListener('click', function() {
-    boton.style.display = 'none'; // Esconde el botón inmediatamente
-    escribirLetra();              // Arranca la animación de escritura
-  });
+    boton.addEventListener('click', function() {
+        boton.style.display = 'none';
+        escribirLetra();
+    });
 </script>
+
+</body>
+</html>
 
 </body>
 </html> 
